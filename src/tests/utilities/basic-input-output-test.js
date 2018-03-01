@@ -4,7 +4,7 @@ function runInOutTestCases(functionUnderTest, tests) {
   tests.forEach(t => {
     it(`input: ${t.input}; expected output: ${t.expectedOutput}`, () => {
       const result = functionUnderTest(...t.input);
-      expect(result).to.equal(t.expectedOutput);
+      expect(result).to.eql(t.expectedOutput);
     });
   });
 }
