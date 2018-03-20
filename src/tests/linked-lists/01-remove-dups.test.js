@@ -1,0 +1,19 @@
+const removeDuplicates = require('../../algorithms/linked-lists/01-remove-dups');
+const yallist = require('yallist');
+
+describe('01. Remove duplicates from a linked list', () => {
+  const tests = [
+    tc([ll('abcd')], ll('abcd')),
+    tc([ll('aabb')], ll('ab')),
+    tc([ll('abcdd')], ll('abcd')),
+    tc([ll('aaaaa')], ll('a')),
+    tc([ll('aaabccc')], ll('abc'))
+  ];
+
+  runInOutTestCases(removeDuplicates, tests);
+});
+
+function ll(input) {
+  const values = Array.from(input);
+  return yallist.create(values);
+}

@@ -1,8 +1,7 @@
 {
   "name": "ctci-algorithms",
   "version": "1.0.0",
-  "description":
-    "My own JavaScript solutions to the algorithm questions from the Crack the Code Interview book.",
+  "description": "My own JavaScript solutions to the algorithm questions from the Crack the Code Interview book.",
   "main": "src/index.js",
   "author": "Walmor Moreira",
   "license": "MIT",
@@ -13,5 +12,8 @@
   },
   "scripts": {
     "test": "mocha --opts ./src/tests/mocha.opts"
+  },
+  "dependencies": {
+    "yallist": "^3.0.2"
   }
 }
