@@ -1,5 +1,5 @@
 const deleteNode = require('../../algorithms/linked-lists/03-delete-middle-node');
-const ll = require('../utilities/linked-list-from-string');
+const llh = require('../utilities/linked-list-helpers');
 const expect = require('chai').expect;
 
 describe('03. Delete a node in the middle of a singly linked list', () => {
@@ -22,13 +22,13 @@ describe('03. Delete a node in the middle of a singly linked list', () => {
 function tc(input, nodeIndex, expectedOutput) {
   return {
     input: createTestCaseInput(input, nodeIndex),
-    expectedOutput: createSinglyLinkedList(expectedOutput),
+    expectedOutput: llh.singlyLinkedList(expectedOutput),
     description: `input: (${input}, ${nodeIndex}); expected output: ${expectedOutput}`
   };
 }
 
 function createTestCaseInput(input, nodeIndex) {
-  const sll = createSinglyLinkedList(input);
+  const sll = llh.singlyLinkedList(input);
 
   let node = sll.head;
 
@@ -39,17 +39,4 @@ function createTestCaseInput(input, nodeIndex) {
   sll.length--;
 
   return { linkedList: sll, nodeToDelete: node };
-}
-
-function createSinglyLinkedList(input) {
-  const sll = ll(input);
-
-  let node = sll.head;
-
-  while (node) {
-    delete node.prev;
-    node = node.next;
-  }
-
-  return sll;
 }

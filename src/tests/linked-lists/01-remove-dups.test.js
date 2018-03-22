@@ -1,5 +1,5 @@
 const removeDuplicates = require('../../algorithms/linked-lists/01-remove-dups');
-const ll = require('../utilities/linked-list-from-string');
+const ll = require('../utilities/linked-list-helpers').linkedListFromString;
 
 describe('01. Remove duplicates from a linked list', () => {
   const tests = [

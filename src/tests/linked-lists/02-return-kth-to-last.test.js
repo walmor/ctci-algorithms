@@ -1,5 +1,5 @@
 const getKthToLast = require('../../algorithms/linked-lists/02-return-kth-to-last');
-const ll = require('../utilities/linked-list-from-string');
+const ll = require('../utilities/linked-list-helpers').linkedListFromString;
 
 describe('02. Return the kth to last element of a singly linked list', () => {
   const tests = [
