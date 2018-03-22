@@ -1,5 +1,5 @@
 const deleteNode = require('../../algorithms/linked-lists/03-delete-middle-node');
-const yallist = require('yallist');
+const ll = require('../utilities/linked-list-from-string');
 const expect = require('chai').expect;
 
 describe('03. Delete a node in the middle of a singly linked list', () => {
@@ -42,8 +42,7 @@ function createTestCaseInput(input, nodeIndex) {
 }
 
 function createSinglyLinkedList(input) {
-  const values = Array.from(input);
-  const sll = yallist.create(values);
+  const sll = ll(input);
 
   let node = sll.head;
 

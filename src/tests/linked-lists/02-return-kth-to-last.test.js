@@ -1,5 +1,5 @@
 const getKthToLast = require('../../algorithms/linked-lists/02-return-kth-to-last');
-const yallist = require('yallist');
+const ll = require('../utilities/linked-list-from-string');
 
 describe('02. Return the kth to last element of a singly linked list', () => {
   const tests = [
@@ -15,8 +15,3 @@ describe('02. Return the kth to last element of a singly linked list', () => {
 
   runInOutTestCases(getKthToLast, tests);
 });
-
-function ll(input) {
-  const values = Array.from(input);
-  return yallist.create(values);
-}

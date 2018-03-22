@@ -1,5 +1,5 @@
 const removeDuplicates = require('../../algorithms/linked-lists/01-remove-dups');
-const yallist = require('yallist');
+const ll = require('../utilities/linked-list-from-string');
 
 describe('01. Remove duplicates from a linked list', () => {
   const tests = [
@@ -12,8 +12,3 @@ describe('01. Remove duplicates from a linked list', () => {
 
   runInOutTestCases(removeDuplicates, tests);
 });
-
-function ll(input) {
-  const values = Array.from(input);
-  return yallist.create(values);
-}
