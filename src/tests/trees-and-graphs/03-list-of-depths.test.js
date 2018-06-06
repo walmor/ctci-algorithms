@@ -1,6 +1,6 @@
 const createListOfDepths = require('../../algorithms/trees-and-graphs/03-list-of-depths');
 
-describe('02. Creates a list of all the nodes at each depth', () => {
+describe('03. Creates a list of all the nodes at each depth', () => {
   const tests = [tc1(), tc2(), tc3()];
 
   runInOutTestCases(createListOfDepths, tests);
