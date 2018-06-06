@@ -1,6 +1,6 @@
 const isBinaryTreeBalanced = require('../../algorithms/trees-and-graphs/04-check-balanced');
 
-describe.only('04. Check if a binary tree is balanced', () => {
+describe('04. Check if a binary tree is balanced', () => {
   const tests = [tc1(), tc2(), tc3()];
 
   runInOutTestCases(isBinaryTreeBalanced, tests);
